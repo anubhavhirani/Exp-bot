@@ -17,7 +17,7 @@ client.on("ready", async () => {
 client.on("message", async message => { 
 if(message.author.client) return;
 
-    const args = message.content.slice(clientSettings.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(botSettings.prefix.length).trim().split(/ +/g);
       const command = args.shift().toLowerCase();
 
   //Gives you the admin role and deletes the message.
