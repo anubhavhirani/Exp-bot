@@ -65,4 +65,4 @@ if(message.author.client) return;
 
 
 // THIS  MUST  BE  THIS  WAY
-bot.login(botSettings.token);
+client.login(botSettings.token);
