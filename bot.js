@@ -1,10 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const token = 'NjA1OTUwMjk3NTg3NzEyMDAw.XUD_2A.RMopYNM6ow2iv1Bt6CcBcfe2XV4';
-
-const PREFIX = '.';
-
 bot.on('ready', () =>{ 
     console.log('Your bot is online!');
     bot.user.setActivity('ExperienceYT on YouTube!');
