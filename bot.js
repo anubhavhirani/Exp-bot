@@ -18,6 +18,9 @@ client.on('message', message =>{
         case 'youtube':
             message.channel.send('Youtube.com/ExperienceYT')
             break;
+        case 'terminus':
+            message.channel.send('Terminus is a good boy!');
+            break;
         case 'clear' :
             if(!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
