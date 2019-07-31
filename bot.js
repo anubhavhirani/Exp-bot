@@ -1,21 +1,22 @@
+const botSettings = require("./botsettings.json");
 const Discord = require("discord.js");
-const client = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client({disableEveryone: true});
 
-client.on("ready", async () => {
+bot.on("ready", async () => {
     console.log(PossumBot Is Now Activated);
     //Bot Status
-    client.user.setActivity(I am listening);
+    bot.user.setActivity(CONFETTI LIVES);
 
     try {
         //Generates a invite link in the console...
-    let link = await client.generateInvite(["ADMINISTRATOR"]);
+    let link = await bot.generateInvite(["ADMINISTRATOR"]);
     console.log(link);
     } catch(e) {
         console.log(e.stack);
     }
 });
-client.on("message", async message => { 
-if(message.author.client) return;
+bot.on("message", async message => { 
+if(message.author.bot) return;
 
     const args = message.content.slice(botSettings.prefix.length).trim().split(/ +/g);
       const command = args.shift().toLowerCase();
@@ -63,6 +64,4 @@ if(message.author.client) return;
 }
 });
 
-
-// THIS  MUST  BE  THIS  WAY
-client.login(botSettings.token);
+bot.login(botSettings.token);
