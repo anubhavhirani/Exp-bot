@@ -21,6 +21,12 @@ client.on('message', message =>{
         case 'terminus':
             message.channel.send('Terminus is a good boy!');
             break;
+        case 'shoonya':
+            message.channel.send('Shoonya bhai ki jay ho!');
+            break;
+        case 'noob':
+            message.channel.send('babbla bhaiya hi noob hai!');
+            break;
         case 'clear' :
             if(!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
