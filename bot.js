@@ -27,6 +27,12 @@ client.on('message', message =>{
         case 'noob':
             message.channel.send('babbla bhaiya hi noob hai!');
             break;
+        case 'rohit':
+            message.channel.send('Photo to dikha bhai!');
+            break;
+        case 'MLA':
+            message.channel.send('Arre meri baat to suno!');
+            break;
         case 'clear' :
             if(!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
