@@ -31,7 +31,7 @@ client.on('message', message =>{
             message.channel.send('Photo to dikha bhai!');
             break;
         case 'MLA':
-            message.channel.send('Arre meri baat to suno!');
+            message.channel.send('Arre ab mera IIT kaise niklega? unn 2 ladkio ka to ho gaya!');
             break;
         case 'clear' :
             if(!args[1]) return message.reply('Please mention number of messages to delete')
