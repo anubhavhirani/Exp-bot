@@ -7,11 +7,11 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message =>{
-    
+client.on('message', message => {
+
     let args = message.content.substring(PREFIX.length).split(" ");
 
-    switch(args[0]){
+    switch (args[0]) {
         case 'ping':
             message.channel.send('pong!');
             break;
@@ -28,18 +28,19 @@ client.on('message', message =>{
             message.channel.send('babbla bhaiya hi noob hai!');
             break;
         case 'rohit':
-            message.channel.send('Arre ab mera IIT kaise niklega? unn 2 ladkio ka to ho gaya!');
+            message.channel.send('Photo to dikha bhai!');
             break;
         case 'MLA':
-            message.channel.send('Babbla bhaiya meri baat to suno?');
+            message.channel.send('Arre meri baat to suno!');
             break;
-        case 'clear' :
-            if(!args[1]) return message.reply('Please mention number of messages to delete')
+        case 'clear':
+            if (!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
             break;
-        
+
     }
 });
+
 
 client.on('message', message => {
 
@@ -50,13 +51,13 @@ client.on('message', message => {
 
             const user = message.mentions.users.first();
 
-            if (user) {
+            if(user){
                 const member = member.guild.member(user);
 
-                if (member) {
-                    member.kick('You were kicked').then(() => {
+                if(member){
+                    member.kick('You were kicked!').then(() =>{
                         message.reply('Successfully kicked ${user.tag}');
-                    }).catch(err => {
+                    }).catch(err =>{
                         message.reply('I was unable to kick the member');
                         console.log(err);
 
@@ -67,5 +68,12 @@ client.on('message', message => {
             } else {
                     message.reply('You need to specify a person')
             }
+
+            break;
+    }
+
+
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
