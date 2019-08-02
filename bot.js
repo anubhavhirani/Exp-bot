@@ -40,7 +40,9 @@ client.on('message', message => {
         case 'boss':
             message.channel.send('Bhadwoss hai ye to!');
             break;
-
+        case 'nav':
+            message.channel.send('Oye saale kya bola mujhe, main sardar hu isme meri galti nahi hai!');
+            break;
     }
 });
 
