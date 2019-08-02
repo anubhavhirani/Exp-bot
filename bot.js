@@ -37,6 +37,9 @@ client.on('message', message => {
             if (!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
             break;
+        case 'boss':
+            message.channel.send('Bhadwoss hai ye to!');
+            break;
 
     }
 });
