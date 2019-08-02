@@ -43,7 +43,7 @@ client.on('message', message => {
         case 'nav':
             message.channel.send('Oye saale kya bola mujhe, main sardar hu isme meri galti nahi hai!');
             break;
-        case '.DeHu':
+        case 'DeHu':
             message.channel.send('Main hi CS:GO hacker hu aimbot chalata hu AWP pe!');
             break;
     }
