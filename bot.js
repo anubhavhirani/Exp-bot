@@ -15,7 +15,9 @@ client.on('ready', () => {
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (!autoMoveEnabled) return
+    if (!JeetohMoveEnabled) return
     if (newUser.voiceChannelID === voiceChannelToMoveFromId) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
+    if (newUser.voiceChannelID === Jeetoh) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
 }) 
 
 client.on('message', message => {
@@ -30,16 +32,7 @@ client.on('message', message => {
         autoMoveEnabled = false
         message.channel.send('Automoving disabled')
     }
-    
-    client.on('voiceStateUpdate', (oldUser, newUser) => {
-    if (!autoMoveEnabled) return
-    if (newUser.voiceChannelID === Jeetoh) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
-}) 
-
-client.on('message', message => {
-
-    let args = message.content.substring(PREFIX.length).split(" ");
-
+   
     if (args[0] === 'jeetoh-lock') {
         JeetohMoveEnabled = true
         message.channel.send('Automoving activated')
