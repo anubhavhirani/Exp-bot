@@ -3,9 +3,11 @@ const client = new Discord.Client();
 
 const PREFIX = '.';
 const voiceChannelToMoveFromId = '628940183735238676'
+const Jeetoh = '628940183735238676'
 const voiceChannelToMoveToId = '628939897742295063'
 const moveerAdminTextChannelId = '629032504644599809' // Don't change this after you've added the correct channel
 let autoMoveEnabled = false
+let JeetohMoveEnabled = false
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -26,6 +28,24 @@ client.on('message', message => {
     }
     if (args[0] === '1-unlock') {
         autoMoveEnabled = false
+        message.channel.send('Automoving disabled')
+    }
+    
+    client.on('voiceStateUpdate', (oldUser, newUser) => {
+    if (!autoMoveEnabled) return
+    if (newUser.voiceChannelID === Jeetoh) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
+}) 
+
+client.on('message', message => {
+
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    if (args[0] === 'jeetoh-lock') {
+        JeetohMoveEnabled = true
+        message.channel.send('Automoving activated')
+    }
+    if (args[0] === 'jeetoh-unlock') {
+        JeetohMoveEnabled = false
         message.channel.send('Automoving disabled')
     }
 
