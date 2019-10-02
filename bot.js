@@ -15,9 +15,7 @@ client.on('ready', () => {
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (!autoMoveEnabled) return
-    if (!JeetohMoveEnabled) return
     if (newUser.voiceChannelID === voiceChannelToMoveFromId) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
-    if (newUser.voiceChannelID === Jeetoh) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
 }) 
 
 client.on('message', message => {
