@@ -2,14 +2,32 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const PREFIX = '.';
+const voiceChannelToMoveFromId = '628940183735238676'
+const voiceChannelToMoveToId = '628939897742295063'
+const moveerAdminTextChannelId = '629032504644599809' // Don't change this after you've added the correct channel
+let autoMoveEnabled = false
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
+client.on('voiceStateUpdate', (oldUser, newUser) => {
+    if (!autoMoveEnabled) return
+    if (newUser.voiceChannelID === voiceChannelToMoveFromId) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
+}) 
+
 client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
+
+    if (args[0] === '1-lock') {
+        autoMoveEnabled = true
+        message.channel.send('Automoving activated')
+    }
+    if (args[0] === '1-unlock') {
+        autoMoveEnabled = false
+        message.channel.send('Automoving disabled')
+    }
 
     switch (args[0]) {
         case 'ping':
@@ -84,4 +102,4 @@ client.on('message', message => {
 });
 
 // THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+client.login('NTY0NzczNzI0NTIwMTg1ODU2.XZTufg.VwkxW1aaiQJzPgmBwUUi8uNNtY8');
