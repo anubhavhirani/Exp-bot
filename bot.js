@@ -92,7 +92,7 @@ client.on('message', message => {
     }
     if (args[0] === 'moveall') {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
-    }
+    }}
 
     switch (args[0]) {
 
@@ -134,7 +134,7 @@ client.on('message', message => {
                 message.channel.send('!tmove 628939897742295063 Trivia Family!');
                 break;
     }
-};
+});
 
 
 client.on('message', message => {
