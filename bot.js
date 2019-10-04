@@ -26,12 +26,17 @@ client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (newUser.voiceChannelID === flipkart && flipkartMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
     if (newUser.voiceChannelID === jeetoh && jeetohMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
     if (newUser.voiceChannelID === mb && mbMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
+    If(message.channel.name === moveeradmin && allMoverEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + "Trivia Family!" + '>')
 }) 
 
 client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
+    if (args[0] === 'moveall') {
+        autoMoveEnabled = true
+        message.channel.send('Moving Everyone to Entry Room!')
+    }
     if (args[0] === 'llock') {
         autoMoveEnabled = true
         message.channel.send('LOCO Automoving activated')
@@ -58,19 +63,19 @@ client.on('message', message => {
     }
     if (args[0] === 'mblock') {
         mbMoveEnabled = true
-        message.channel.send('Flipkart Automoving activated')
+        message.channel.send('100MB Automoving activated')
     }
     if (args[0] === 'mbunlock') {
         mbMoveEnabled = false
-        message.channel.send('Flipkart Automoving disabled')
+        message.channel.send('100MB Automoving disabled')
     }
     if (args[0] === 'jlock') {
         jeetohMoveEnabled = true
-        message.channel.send('Flipkart Automoving activated')
+        message.channel.send('Jeetoh Automoving activated')
     }
     if (args[0] === 'junlock') {
         jeetohMoveEnabled = false
-        message.channel.send('Flipkart Automoving disabled')
+        message.channel.send('Jeetoh Automoving disabled')
     }
     if (args[0] === 'vclock') {
         jeetohMoveEnabled = true
@@ -87,10 +92,6 @@ client.on('message', message => {
         flipkartMoveEnabled = false
         mbMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
-    }
-    if (args[0] === 'vm') {
-        jeetohMoveEnabled = false
-        message.channel.send('>>voicemove')
     }
 
     switch (args[0]) {
@@ -128,6 +129,9 @@ client.on('message', message => {
         case 'DeHu':
             message.channel.send('Main hi CS:GO hacker hu aimbot chalata hu AWP pe!');
             break;
+        case 'moveall':
+                message.channel.send('!tmove 628939897742295063 Trivia Family!');
+                break;
     }
 });
 
