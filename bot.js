@@ -15,10 +15,6 @@ let autoMoveEnabled = false
 let confettiMoveEnabled = false
 let flipkartMoveEnabled = false
 
-client.on('ready', () => {client.user.setActivity(ExperienceYT on Instagram)
-    console.log('I am ready!');
-});
-
 client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (newUser.voiceChannelID === voiceChannelToMoveFromId && autoMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
     if (newUser.voiceChannelID === confetti && confettiMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
