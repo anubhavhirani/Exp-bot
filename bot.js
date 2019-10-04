@@ -11,7 +11,7 @@ let autoMoveEnabled = false
 let confettiMoveEnabled = false
 let flipkartMoveEnabled = false
 
-client.on('ready', () => {client.user.setActivity('ExperienceYT on Instagram', { type: 'WATCHING' });
+client.on('ready', () => {client.user.setActivity(ExperienceYT on Instagram)
     console.log('I am ready!');
 });
 
