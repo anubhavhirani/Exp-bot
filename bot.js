@@ -32,8 +32,6 @@ client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
-    If(message.channel.name === "moveeradmin");{
-
     if (args[0] === 'llock') {
         autoMoveEnabled = true
         message.channel.send('LOCO Automoving activated')
@@ -92,7 +90,7 @@ client.on('message', message => {
     }
     if (args[0] === 'moveall') {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
-    }}
+    }
 
     switch (args[0]) {
 
