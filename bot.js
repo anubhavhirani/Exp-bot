@@ -5,11 +5,16 @@ const PREFIX = '.';
 const voiceChannelToMoveFromId = '628940183735238676'
 const confetti = '628940303763767355'
 const flipkart = '628940415567134720'
+const jeetoh = '628940265511452682'
+const mb = '628940223224610816'
 const voiceChannelToMoveToId = '628939897742295063'
 const moveerAdminTextChannelId = '629032504644599809' // Don't change this after you've added the correct channel
+
 let autoMoveEnabled = false
 let confettiMoveEnabled = false
 let flipkartMoveEnabled = false
+let jeetohMoveEnabled = false
+let mbMoveEnabled = false
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -19,6 +24,8 @@ client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (newUser.voiceChannelID === voiceChannelToMoveFromId && autoMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
     if (newUser.voiceChannelID === confetti && confettiMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
     if (newUser.voiceChannelID === flipkart && flipkartMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
+    if (newUser.voiceChannelID === jeetoh && jeetohMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
+    if (newUser.voiceChannelID === mb && mbMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
 }) 
 
 client.on('message', message => {
@@ -47,6 +54,22 @@ client.on('message', message => {
     }
     if (args[0] === 'funlock') {
         flipkartMoveEnabled = false
+        message.channel.send('Flipkart Automoving disabled')
+    }
+    if (args[0] === 'mblock') {
+        mbMoveEnabled = true
+        message.channel.send('Flipkart Automoving activated')
+    }
+    if (args[0] === 'mbunlock') {
+        mbMoveEnabled = false
+        message.channel.send('Flipkart Automoving disabled')
+    }
+    if (args[0] === 'jlock') {
+        jeetohMoveEnabled = true
+        message.channel.send('Flipkart Automoving activated')
+    }
+    if (args[0] === 'junlock') {
+        jeetohMoveEnabled = false
         message.channel.send('Flipkart Automoving disabled')
     }
 
