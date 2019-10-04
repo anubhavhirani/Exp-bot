@@ -17,7 +17,14 @@ let jeetohMoveEnabled = false
 let mbMoveEnabled = false
 
 client.on('ready', () => {
-    console.log('I am ready!');
+   console.log('Bot: Hosting ' + `${client.users.size}` + ' users, in ' + `${client.channels.size}` + ' channels of ' + `${client.guilds.size}` + ' guilds.');
+    client.user.setStatus('online')
+    client.user.setPresence({
+        game: {
+            name: 'ExperienceYT on Instagram',
+            type: "Playing",
+        }
+    });
 });
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
