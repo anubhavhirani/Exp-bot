@@ -4,10 +4,12 @@ const client = new Discord.Client();
 const PREFIX = '.';
 const voiceChannelToMoveFromId = '628940183735238676'
 const confetti = '628940303763767355'
+const flipkart = '628940415567134720'
 const voiceChannelToMoveToId = '628939897742295063'
 const moveerAdminTextChannelId = '629032504644599809' // Don't change this after you've added the correct channel
 let autoMoveEnabled = false
 let confettiMoveEnabled = false
+let flipkartMoveEnabled = false
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -16,17 +18,18 @@ client.on('ready', () => {
 client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (newUser.voiceChannelID === voiceChannelToMoveFromId && autoMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
     if (newUser.voiceChannelID === confetti && confettiMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
+    if (newUser.voiceChannelID === flipkart && flipkartMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
 }) 
 
 client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
-    if (args[0] === '1-lock') {
+    if (args[0] === 'llock') {
         autoMoveEnabled = true
         message.channel.send('Automoving activated')
     }
-    if (args[0] === '1-unlock') {
+    if (args[0] === 'lunlock') {
         autoMoveEnabled = false
         message.channel.send('Automoving disabled')
     }
@@ -36,6 +39,14 @@ client.on('message', message => {
     }
     if (args[0] === 'cunlock') {
         confettiMoveEnabled = false
+        message.channel.send('Confetti Automoving disabled')
+    }
+    if (args[0] === 'flock') {
+        flipkartMoveEnabled = true
+        message.channel.send('Confetti Automoving activated')
+    }
+    if (args[0] === 'funlock') {
+        flipkartMoveEnabled = false
         message.channel.send('Confetti Automoving disabled')
     }
 
