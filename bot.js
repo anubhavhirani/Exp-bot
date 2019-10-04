@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+client.on('ready', () => {client.user.setActivity('ExperienceYT on Instagram');
+    console.log('I am ready!');
+});
+
 const PREFIX = '.';
 const voiceChannelToMoveFromId = '628940183735238676'
 const confetti = '628940303763767355'
