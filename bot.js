@@ -17,8 +17,6 @@ let jeetohMoveEnabled = false
 let mbMoveEnabled = false
 
 client.on('ready', () => {
-   On Instagram
-client.user.setActivity(`ExperienceYT`, {type: "playing"});
     console.log('I am ready!');
 });
 
