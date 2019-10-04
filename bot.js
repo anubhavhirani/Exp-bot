@@ -3,17 +3,19 @@ const client = new Discord.Client();
 
 const PREFIX = '.';
 const voiceChannelToMoveFromId = '628940183735238676'
+const confetti = '628940303763767355'
 const voiceChannelToMoveToId = '628939897742295063'
 const moveerAdminTextChannelId = '629032504644599809' // Don't change this after you've added the correct channel
 let autoMoveEnabled = false
+let confettiMoveEnabled = false
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
-    if (!autoMoveEnabled) return
-    if (newUser.voiceChannelID === voiceChannelToMoveFromId) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
+    if (newUser.voiceChannelID === voiceChannelToMoveFromId && autoMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
+    if (newUser.voiceChannelID === confetti && confettiMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
 }) 
 
 client.on('message', message => {
@@ -27,6 +29,14 @@ client.on('message', message => {
     if (args[0] === '1-unlock') {
         autoMoveEnabled = false
         message.channel.send('Automoving disabled')
+    }
+    if (args[0] === 'clock') {
+        confettiMoveEnabled = true
+        message.channel.send('Confetti Automoving activated')
+    }
+    if (args[0] === 'cunlock') {
+        confettiMoveEnabled = false
+        message.channel.send('Confetti Automoving disabled')
     }
 
     switch (args[0]) {
