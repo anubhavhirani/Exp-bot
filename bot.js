@@ -26,17 +26,12 @@ client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (newUser.voiceChannelID === flipkart && flipkartMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
     if (newUser.voiceChannelID === jeetoh && jeetohMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
     if (newUser.voiceChannelID === mb && mbMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
-    If(message.channel.name === moveeradmin && allMoverEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + "Trivia Family!" + '>')
 }) 
 
 client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
-    if (args[0] === 'moveall') {
-        autoMoveEnabled = true
-        message.channel.send('Moving Everyone to Entry Room!')
-    }
     if (args[0] === 'llock') {
         autoMoveEnabled = true
         message.channel.send('LOCO Automoving activated')
@@ -93,8 +88,12 @@ client.on('message', message => {
         mbMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
     }
+    if (args[0] === 'moveall') {
+        message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
+    }
 
     switch (args[0]) {
+
         case 'ping':
             message.channel.send('pong!');
             break;
