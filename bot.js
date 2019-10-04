@@ -27,11 +27,11 @@ client.on('message', message => {
 
     if (args[0] === 'llock') {
         autoMoveEnabled = true
-        message.channel.send('Automoving activated')
+        message.channel.send('LOCO Automoving activated')
     }
     if (args[0] === 'lunlock') {
         autoMoveEnabled = false
-        message.channel.send('Automoving disabled')
+        message.channel.send('LOCO Automoving disabled')
     }
     if (args[0] === 'clock') {
         confettiMoveEnabled = true
@@ -43,11 +43,11 @@ client.on('message', message => {
     }
     if (args[0] === 'flock') {
         flipkartMoveEnabled = true
-        message.channel.send('Confetti Automoving activated')
+        message.channel.send('Flipkart Automoving activated')
     }
     if (args[0] === 'funlock') {
         flipkartMoveEnabled = false
-        message.channel.send('Confetti Automoving disabled')
+        message.channel.send('Flipkart Automoving disabled')
     }
 
     switch (args[0]) {
