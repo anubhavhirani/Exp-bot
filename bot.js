@@ -58,19 +58,39 @@ client.on('message', message => {
     }
     if (args[0] === 'mblock') {
         mbMoveEnabled = true
-        message.channel.send('100MB Automoving activated')
+        message.channel.send('Flipkart Automoving activated')
     }
     if (args[0] === 'mbunlock') {
         mbMoveEnabled = false
-        message.channel.send('100MB Automoving disabled')
+        message.channel.send('Flipkart Automoving disabled')
     }
     if (args[0] === 'jlock') {
         jeetohMoveEnabled = true
-        message.channel.send('Jeetoh Automoving activated')
+        message.channel.send('Flipkart Automoving activated')
     }
     if (args[0] === 'junlock') {
         jeetohMoveEnabled = false
-        message.channel.send('Jeetoh Automoving disabled')
+        message.channel.send('Flipkart Automoving disabled')
+    }
+    if (args[0] === 'vclock') {
+        jeetohMoveEnabled = true
+        autoMoveEnabled = true
+        confettiMoveEnabled = true
+        flipkartMoveEnabled = true
+        mbMoveEnabled = true
+        message.channel.send('All Voice Channels Locked to Entry Room')
+    }
+    if (args[0] === 'vcunlock') {
+        jeetohMoveEnabled = false
+        autoMoveEnabled = false
+        confettiMoveEnabled = false
+        flipkartMoveEnabled = false
+        mbMoveEnabled = false
+        message.channel.send('All Voice Channels Unlocked')
+    }
+    if (args[0] === 'vm') {
+        jeetohMoveEnabled = false
+        message.channel.send('>>voicemove')
     }
 
     switch (args[0]) {
