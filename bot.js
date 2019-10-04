@@ -32,6 +32,8 @@ client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
+    If(message.channel.name === "moveeradmin");{
+
     if (args[0] === 'llock') {
         autoMoveEnabled = true
         message.channel.send('LOCO Automoving activated')
@@ -128,8 +130,11 @@ client.on('message', message => {
         case 'DeHu':
             message.channel.send('Main hi CS:GO hacker hu aimbot chalata hu AWP pe!');
             break;
+        case 'moveall':
+                message.channel.send('!tmove 628939897742295063 Trivia Family!');
+                break;
     }
-});
+};
 
 
 client.on('message', message => {
