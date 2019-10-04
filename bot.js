@@ -11,7 +11,7 @@ let autoMoveEnabled = false
 let confettiMoveEnabled = false
 let flipkartMoveEnabled = false
 
-client.on('ready', () => {
+client.on('ready', () => {bot.user.setGame('Instagram: ExperienceYT')
     console.log('I am ready!');
 });
 
@@ -27,11 +27,11 @@ client.on('message', message => {
 
     if (args[0] === 'llock') {
         autoMoveEnabled = true
-        message.channel.send('LOCO Automoving activated')
+        message.channel.send('Automoving activated')
     }
     if (args[0] === 'lunlock') {
         autoMoveEnabled = false
-        message.channel.send('LOCO Automoving disabled')
+        message.channel.send('Automoving disabled')
     }
     if (args[0] === 'clock') {
         confettiMoveEnabled = true
@@ -43,11 +43,11 @@ client.on('message', message => {
     }
     if (args[0] === 'flock') {
         flipkartMoveEnabled = true
-        message.channel.send('Flipkart Automoving activated')
+        message.channel.send('Confetti Automoving activated')
     }
     if (args[0] === 'funlock') {
         flipkartMoveEnabled = false
-        message.channel.send('Flipkart Automoving disabled')
+        message.channel.send('Confetti Automoving disabled')
     }
 
     switch (args[0]) {
