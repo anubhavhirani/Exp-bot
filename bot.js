@@ -11,7 +11,7 @@ let autoMoveEnabled = false
 let confettiMoveEnabled = false
 let flipkartMoveEnabled = false
 
-client.on('ready', () => {bot.user.setGame('Instagram: ExperienceYT')
+client.on('ready', () => {client.user.setGame('Instagram: ExperienceYT')
     console.log('I am ready!');
 });
 
