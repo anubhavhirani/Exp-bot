@@ -128,9 +128,6 @@ client.on('message', message => {
         case 'DeHu':
             message.channel.send('Main hi CS:GO hacker hu aimbot chalata hu AWP pe!');
             break;
-        case 'moveall':
-                message.channel.send('!tmove 628939897742295063 Trivia Family!');
-                break;
     }
 });
 
