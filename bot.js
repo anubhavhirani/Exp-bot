@@ -18,7 +18,6 @@ let mbMoveEnabled = false
 
 client.on('ready', () => {
     console.log('I am ready!');
-    client.user.setActivity("ExperienceYT on Instagram");
 });
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
