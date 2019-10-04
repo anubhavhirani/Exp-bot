@@ -58,19 +58,19 @@ client.on('message', message => {
     }
     if (args[0] === 'mblock') {
         mbMoveEnabled = true
-        message.channel.send('Flipkart Automoving activated')
+        message.channel.send('100MB Automoving activated')
     }
     if (args[0] === 'mbunlock') {
         mbMoveEnabled = false
-        message.channel.send('Flipkart Automoving disabled')
+        message.channel.send('100MB Automoving disabled')
     }
     if (args[0] === 'jlock') {
         jeetohMoveEnabled = true
-        message.channel.send('Flipkart Automoving activated')
+        message.channel.send('Jeetoh Automoving activated')
     }
     if (args[0] === 'junlock') {
         jeetohMoveEnabled = false
-        message.channel.send('Flipkart Automoving disabled')
+        message.channel.send('Jeetoh Automoving disabled')
     }
 
     switch (args[0]) {
