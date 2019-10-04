@@ -1,10 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', () => {client.user.setActivity('ExperienceYT on Instagram');
-    console.log('I am ready!');
-});
-
 const PREFIX = '.';
 const voiceChannelToMoveFromId = '628940183735238676'
 const confetti = '628940303763767355'
@@ -14,6 +10,10 @@ const moveerAdminTextChannelId = '629032504644599809' // Don't change this after
 let autoMoveEnabled = false
 let confettiMoveEnabled = false
 let flipkartMoveEnabled = false
+
+client.on('ready', () => {
+    console.log('I am ready!');
+});
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (newUser.voiceChannelID === voiceChannelToMoveFromId && autoMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
