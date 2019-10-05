@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-bot.user.setActivity(`ExperienceYT on Instagram.`);
 
 const PREFIX = '.';
 const voiceChannelToMoveFromId = '628940183735238676'
@@ -18,7 +17,8 @@ let jeetohMoveEnabled = false
 let mbMoveEnabled = false
 
 client.on('ready', () => {
-    console.log('I am ready!');
+	console.log('I am ready!');
+	bot.user.setActivity(`ExperienceYT on Instagram.`);
 });
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
