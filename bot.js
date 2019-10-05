@@ -109,7 +109,7 @@ client.on('message', message => {
         message.channel.send('!fmove "Entry Room" LOCO')
     }
     if (args[0] === 'etoc') {
-        message.channel.send('!fmove "Entry Room" CONFETTI')
+        message.channel.send('!fmove "Entry Room" CONFETII')
     }
     if (args[0] === 'etof') {
         message.channel.send('!fmove "Entry Room" FLIPKART')
