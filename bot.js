@@ -18,9 +18,6 @@ let mbMoveEnabled = false
 
 client.on('ready', () => {
   console.log('I am ready!');
- client.user.setPresence({ watching: { name: 'with discord' }, status: 'online' })
-  .then(console.log)
-  .catch(console.error);
 })
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
