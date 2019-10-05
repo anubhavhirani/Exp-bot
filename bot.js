@@ -105,6 +105,21 @@ client.on('message', message => {
     if (args[0] === 'mbtoe') {
         message.channel.send('!fmove 100MB "Entry Room"')
     }
+    if (args[0] === 'etol') {
+        message.channel.send('!fmove "Entry Room" LOCO')
+    }
+    if (args[0] === 'etoc') {
+        message.channel.send('!fmove "Entry Room" CONFETTI')
+    }
+    if (args[0] === 'etof') {
+        message.channel.send('!fmove "Entry Room" FLIPKART')
+    }
+    if (args[0] === 'etoj') {
+        message.channel.send('!fmove "Entry Room" JEETOH')
+    }
+    if (args[0] === 'etomb') {
+        message.channel.send('!fmove "Entry Room" 100MB')
+    }
     if (args[0] === 'moveall') {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
     }}
