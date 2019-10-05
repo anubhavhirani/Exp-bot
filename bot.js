@@ -18,7 +18,9 @@ let mbMoveEnabled = false
 
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setPresence({ game: { name: 'ExperienceYT on Instagram' }, status: 'idle' })
+  client.user.setActivity('YouTube', { type: 'WATCHING' })
+  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+  .catch(console.error);
 })
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
