@@ -17,9 +17,9 @@ let jeetohMoveEnabled = false
 let mbMoveEnabled = false
 
 client.on('ready', () => {
-	console.log('I am ready!');
-	client.user.setPresence({ playing: { name: 'ExperienceYT on Instagram.' }, status: 'idle' })
-});
+  log.info('Startup successful.')
+  client.user.setPresence({ game: { name: 'ExperienceYT on Instagram' }, status: 'idle' })
+})
 
 client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (newUser.voiceChannelID === voiceChannelToMoveFromId && autoMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
