@@ -18,7 +18,7 @@ let mbMoveEnabled = false
 
 client.on('ready', () => {
   console.log('I am ready!');
- client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
+ client.user.setPresence({ watching: { name: 'with discord' }, status: 'online' })
   .then(console.log)
   .catch(console.error);
 })
@@ -132,36 +132,10 @@ client.on('message', message => {
         case 'ping':
             message.channel.send('pong!');
             break;
-        case 'youtube':
-            message.channel.send('Youtube.com/ExperienceYT')
-            break;
-        case 'terminus':
-            message.channel.send('Terminus is a good boy!');
-            break;
-        case 'shoonya':
-            message.channel.send('Shoonya bhai ki jay ho!');
-            break;
-        case 'noob':
-            message.channel.send('babbla bhaiya hi noob hai!');
-            break;
-        case 'rohit':
-            message.channel.send('Photo to dikha bhai!');
-            break;
-        case 'MLA':
-            message.channel.send('Arre meri baat to suno!');
-            break;
+
         case 'clear':
             if (!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
-            break;
-        case 'boss':
-            message.channel.send('Bhadwoss hai ye to!');
-            break;
-        case 'nav':
-            message.channel.send('Oye saale kya bola mujhe, main sardar hu isme meri galti nahi hai!');
-            break;
-        case 'DeHu':
-            message.channel.send('Main hi CS:GO hacker hu aimbot chalata hu AWP pe!');
             break;
     }
 });
