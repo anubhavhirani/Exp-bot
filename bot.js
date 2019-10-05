@@ -166,39 +166,5 @@ client.on('message', message => {
     }
 });
 
-
-client.on('message', message => {
-
-    let args = message.content.substring(PREFIX.length).split(" ");
-
-    switch (args[0]) {
-        case 'kick':
-
-            const user = message.mentions.users.first();
-
-            if(user){
-                const member = member.guild.member(user);
-
-                if(member){
-                    member.kick('You were kicked!').then(() =>{
-                        message.reply('Successfully kicked ${user.tag}');
-                    }).catch(err =>{
-                        message.reply('I was unable to kick the member');
-                        console.log(err);
-
-                    });
-                } else {
-                    message.reply("That user isn\'t in this guild")
-                }
-            } else {
-                    message.reply('You need to specify a person')
-            }
-
-            break;
-    }
-
-
-});
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
