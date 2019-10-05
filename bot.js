@@ -74,6 +74,9 @@ client.on('message', message => {
         jeetohMoveEnabled = false
         message.channel.send('Jeetoh Automoving disabled')
     }
+     if (args[0] === '.ltoe') {
+        message.channel.send('!fmove LOCO "Entry Room"')
+    }
     if (args[0] === 'vclock') {
         jeetohMoveEnabled = true
         autoMoveEnabled = true
