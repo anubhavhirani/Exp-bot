@@ -18,8 +18,8 @@ let mbMoveEnabled = false
 
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setActivity('YouTube', { type: 'WATCHING' })
-  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+ client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
+  .then(console.log)
   .catch(console.error);
 })
 
