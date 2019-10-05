@@ -74,9 +74,6 @@ client.on('message', message => {
         jeetohMoveEnabled = false
         message.channel.send('Jeetoh Automoving disabled')
     }
-     if (args[0] === 'ltoe') {
-        message.channel.send('!fmove LOCO "Entry Room"')
-    }
     if (args[0] === 'vclock') {
         jeetohMoveEnabled = true
         autoMoveEnabled = true
@@ -92,6 +89,21 @@ client.on('message', message => {
         flipkartMoveEnabled = false
         mbMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
+    }
+    if (args[0] === 'ltoe') {
+        message.channel.send('!fmove LOCO "Entry Room"')
+    }
+    if (args[0] === 'ctoe') {
+        message.channel.send('!fmove CONFETII "Entry Room"')
+    }
+    if (args[0] === 'jtoe') {
+        message.channel.send('!fmove JEETOH "Entry Room"')
+    }
+    if (args[0] === 'ftoe') {
+        message.channel.send('!fmove FLIPKART "Entry Room"')
+    }
+    if (args[0] === 'mbtoe') {
+        message.channel.send('!fmove 100MB "Entry Room"')
     }
     if (args[0] === 'moveall') {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
