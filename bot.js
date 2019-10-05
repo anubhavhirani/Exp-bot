@@ -17,7 +17,7 @@ let jeetohMoveEnabled = false
 let mbMoveEnabled = false
 
 client.on('ready', () => {
-  log.info('Startup successful.')
+  console.log('I am ready!');
   client.user.setPresence({ game: { name: 'ExperienceYT on Instagram' }, status: 'idle' })
 })
 
