@@ -142,7 +142,7 @@ client.on('message', message => {
                     "color": 16738560,
                     "timestamp": "2019-10-06T01:21:31.044Z",
                     "footer": {
-                      "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+                      "icon_url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png",
                       "text": "footer text"
                     },
                     "thumbnail": {
@@ -152,9 +152,9 @@ client.on('message', message => {
                       "url": "https://cdn.discordapp.com/embed/avatars/0.png"
                     },
                     "author": {
-                      "name": "author name",
+                      "name": "VC Mover",
                       "url": "https://discordapp.com",
-                      "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+                      "icon_url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png"
                     },
                     "fields": [
                       {
