@@ -17,13 +17,7 @@ let jeetohMoveEnabled = false
 let mbMoveEnabled = false
 
   client.on('ready', () => {
-   client.user.setPresence({
-        status:"idle",
-        game: {
-            type: "WATCHING",
-            name : "owo"
-        }
-    })
+   console.log('I am ready!');
 });
 
 client.on('voiceStateUpdate',(oldMember,newMember)=>{
