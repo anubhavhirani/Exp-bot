@@ -26,7 +26,7 @@ client.on('voiceStateUpdate',(oldMember,newMember)=>{
 	if(oldMember.voiceChannel===undefined&&newMember.voiceChannel!==undefined){
 		channel.send(`${newMember} joined ${newMember.voiceChannel}`);
 	}else if(newMember.voiceChannel===undefined){
-		channel.send(`${oldMember} left ${oldMember.voiceChannel}.timestamp()`);
+		channel.send(`${oldMember} left ${oldMember.voiceChannel}`);
 	}
 });
 
