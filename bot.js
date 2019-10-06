@@ -19,7 +19,7 @@ let mbMoveEnabled = false
   client.on('ready', () => {
   console.log('I am ready!');
     client.user.setPresence("my code", { type: "Watching"})
-})
+});
 
 client.on('voiceStateUpdate',(oldMember,newMember)=>{
 	const channel=oldMember.guild.channels.find(ch=>ch.name==='voice-log');
