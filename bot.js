@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const PREFIX = '';
 
 const voiceChannelToMoveFromId = '628940183735238676'
 const confetti = '628940303763767355'
