@@ -142,10 +142,10 @@ client.on('message', message => {
                     "timestamp": "2019-10-06T01:21:31.044Z",
                     "footer": {
                       "icon_url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png",
-                      "text": "footer text"
+                      "text": "VC Mover"
                     },
                     "thumbnail": {
-                      "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+                      "url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png"
                     },
                     "image": {
                       "url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png"
@@ -157,8 +157,8 @@ client.on('message', message => {
                     },
                     "fields": [
                       {
-                        "name": "🤔",
-                        "value": "some of these properties have certain limits..."
+                        "name": " 'vclock' ",
+                        "value": "Locks all voice channels, leaving main VC"
                       },
                       {
                         "name": "😱",
