@@ -148,9 +148,6 @@ client.on('message', message => {
                     "thumbnail": {
                       "url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png"
                     },
-                    "image": {
-                      "url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png"
-                    },
                     "author": {
                       "name": "VC Mover",
                       "url": "https://discordapp.com",
