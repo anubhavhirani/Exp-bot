@@ -23,6 +23,7 @@ let mbMoveEnabled = false
             type: "WATCHING",
             name : "owo"
         }
+    })
 });
 
 client.on('voiceStateUpdate',(oldMember,newMember)=>{
