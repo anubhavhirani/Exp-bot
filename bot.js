@@ -17,11 +17,12 @@ let jeetohMoveEnabled = false
 let mbMoveEnabled = false
 
   client.on('ready', () => {
+    console.log('I am ready!');
     client.user.setPresence({
-        status:"idle",
+        status:"online",
         game: {
             type: "PLAYING",
-            name : "owo"
+            name : "ExperienceYT on Instagram"
         }
     })
 	  
@@ -33,7 +34,7 @@ client.on('voiceStateUpdate',(oldMember,newMember)=>{
 	if(oldMember.voiceChannel===undefined&&newMember.voiceChannel!==undefined){
 		channel.send(`${newMember} joined ${newMember.voiceChannel}`);
 	}else if(newMember.voiceChannel===undefined){
-		channel.send(`${oldMember} left ${oldMember.voiceChannel}`);
+		channel.send(`${oldMember} left ${oldMember.voiceChannel} ${new Date()}`);
 	}
 });
 
@@ -190,5 +191,6 @@ client.on('message', message => {
     }
 });
 
-// THIS  MUST  BE  THIS  WAY
+// THIS MUST BE THIS WAY
+
 client.login(process.env.BOT_TOKEN);
