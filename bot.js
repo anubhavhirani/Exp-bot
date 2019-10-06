@@ -1,5 +1,25 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const fs = require("fs");
+client.commands = new Discord.Collection();
+
+fs.readdir("./commands/", (err, files) => {
+
+    if(err) console.log(err);
+
+    let jsfile = files.filter(f => f.split(".").pop() === "js")
+    if(jsfile.length <= 0){
+        console.log("couldn't find commands.");
+        return;
+    }
+
+    jsfile.forEach((f, i) =>{
+       let props = require('./commands/$(f)');
+       console.log('${f} loaded!');
+       client.commands.set(props.help.name, props);
+  });
+
+});
 
 const PREFIX = '.';
 const voiceChannelToMoveFromId = '628940183735238676'
@@ -20,7 +40,7 @@ client.on('ready', () => {
   console.log('I am ready!');
 })
 
-client.on('voiceStateUpdate', (oldUser, newUser) => {
+client.on('voiceStateUpdate', (_oldUser, newUser) => {
     if (newUser.voiceChannelID === voiceChannelToMoveFromId && autoMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
     if (newUser.voiceChannelID === confetti && confettiMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
     if (newUser.voiceChannelID === flipkart && flipkartMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
