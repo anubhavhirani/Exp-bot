@@ -136,9 +136,9 @@ client.on('message', message => {
             break;
         case 'help':
             const embed = {
-                "title": "VC Mover by ExperienceYT!",
-                    "```\Default Prefix is set to '.'```",
-                    "description": "`Here are all the commands for your server:`"
+                "title": "VC Mover by ExperienceYT!"
+                    " ```\Default Prefix is set to '.'``` ",
+                    "description": " `Here are all the commands for your server:` "
                     "color": 16738560,
                     "timestamp": "2019-10-06T01:21:31.044Z",
                     "footer": {
