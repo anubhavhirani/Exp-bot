@@ -137,8 +137,7 @@ client.on('message', message => {
         case 'help':
             const embed = {
                 "title": "VC Mover by ExperienceYT!",
-                    "description": "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
-                    "url": "https://discordapp.com",
+                    "description": "Here are all the commands for your server: ```\Default Prefix is set to '.'```",
                     "color": 16738560,
                     "timestamp": "2019-10-06T01:21:31.044Z",
                     "footer": {
@@ -149,7 +148,7 @@ client.on('message', message => {
                       "url": "https://cdn.discordapp.com/embed/avatars/0.png"
                     },
                     "image": {
-                      "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+                      "url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png"
                     },
                     "author": {
                       "name": "VC Mover",
