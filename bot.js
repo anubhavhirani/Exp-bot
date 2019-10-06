@@ -157,26 +157,16 @@ client.on('message', message => {
                     },
                     "fields": [
                       {
-                        "name": " 'vclock' ",
-                        "value": "Locks all voice channels, leaving main VC"
+                        "name": " `vclock:` ",
+                        "value": "Locks all voice channels, leaving main voice channel."
                       },
                       {
-                        "name": "😱",
-                        "value": "try exceeding some of them!"
+                        "name": " `vcunlock:` ",
+                        "value": "Unlocks all voice channels."
                       },
                       {
-                        "name": "🙄",
-                        "value": "an informative error should show up, and this view will remain as-is until all issues are fixed"
-                      },
-                      {
-                        "name": "<:thonkang:219069250692841473>",
-                        "value": "these last two",
-                        "inline": true
-                      },
-                      {
-                        "name": "<:thonkang:219069250692841473>",
-                        "value": "are inline fields",
-                        "inline": true
+                        "name": " `moveall:' ",
+                        "value": "Moves users from all voice channels to main Voice channel"
                       }
                     ]
                   };
