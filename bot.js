@@ -90,41 +90,41 @@ client.on('message', message => {
         mbMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
     }
-    if (args[0] === 'ltoe') {
+    if (args[0].toLowerCase() === 'ltoe') {
         message.channel.send('!fmove LOCO "Entry Room"')
     }
-    if (args[0] === 'ctoe') {
+    if (args[0].toLowerCase() === 'ctoe') {
         message.channel.send('!fmove CONFETII "Entry Room"')
     }
-    if (args[0] === 'jtoe') {
+    if (args[0].toLowerCase() === 'jtoe') {
         message.channel.send('!fmove JEETOH "Entry Room"')
     }
-    if (args[0] === 'ftoe') {
+    if (args[0].toLowerCase() === 'ftoe') {
         message.channel.send('!fmove FLIPKART "Entry Room"')
     }
-    if (args[0] === 'mbtoe') {
+    if (args[0].toLowerCase() === 'mbtoe') {
         message.channel.send('!fmove 100MB "Entry Room"')
     }
-    if (args[0] === 'etol') {
+    if (args[0].toLowerCase() === 'etol') {
         message.channel.send('!fmove "Entry Room" LOCO')
     }
-    if (args[0] === 'etoc') {
+    if (args[0].toLowerCase() === 'etoc') {
         message.channel.send('!fmove "Entry Room" CONFETII')
     }
-    if (args[0] === 'etof') {
+    if (args[0].toLowerCase() === 'etof') {
         message.channel.send('!fmove "Entry Room" FLIPKART')
     }
-    if (args[0] === 'etoj') {
+    if (args[0].toLowerCase() === 'etoj') {
         message.channel.send('!fmove "Entry Room" JEETOH')
     }
-    if (args[0] === 'etomb') {
+    if (args[0].toLowerCase() === 'etomb') {
         message.channel.send('!fmove "Entry Room" 100MB')
     }
-    if (args[0] === 'moveall') {
+    if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
     }}
 
-    switch (args[0]) {
+    switch (args[0].toLowerCase()) {
 
         case 'ping':
             message.channel.send('pong!');
@@ -134,7 +134,8 @@ client.on('message', message => {
             if (!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
             break;
-        case 'help'.toLower():
+            
+        case 'help':
             const embed = {
                 "title": "VC Mover by ExperienceYT!",
                  "name": " `Default prefix is set to '.'` ",
