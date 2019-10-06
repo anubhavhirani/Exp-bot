@@ -137,7 +137,7 @@ client.on('message', message => {
         case 'help':
             const embed = {
                 "title": "VC Mover by ExperienceYT!",
-                    "name": " `Default prefix is set to '.' ` ",
+                    "name": " *`Default prefix is set to '.' `* ",
                     "description": " `Here are all the commands for your server:` ",
                     "color": 16738560,
                     "timestamp": "2019-10-06T01:21:31.044Z",
@@ -171,7 +171,7 @@ client.on('message', message => {
                       }
                     ]
                   };
-                  message.channel.sendEmbed(embed);
+                  message.channel.send(embed);
             break;    
     }
 });
