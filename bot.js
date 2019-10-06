@@ -19,7 +19,7 @@ let mbMoveEnabled = false
   client.on('ready', () => {
     console.log('I am ready!');
     client.user.setPresence({
-        status:"online",
+        status:"idle",
         game: {
             type: "PLAYING",
             name : "ExperienceYT on Instagram"
