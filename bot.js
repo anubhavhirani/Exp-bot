@@ -20,6 +20,16 @@ let mbMoveEnabled = false
   console.log('I am ready!');
 })
 
+client.on('voiceStateUpdate',(oldMember,newMember)=>{
+	const channel=oldMember.guild.channels.find(ch=>ch.name==='voice-log');
+	if(!channel)return;
+	if(oldMember.voiceChannel===undefined&&newMember.voiceChannel!==undefined){
+		channel.send(`${newMember} joins ${newMember.voiceChannel}`);
+	}else if(newMember.voiceChannel===undefined){
+		channel.send(`${oldMember} leaves ${oldMember.voiceChannel}`);
+	}
+});
+
 client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (newUser.voiceChannelID === voiceChannelToMoveFromId && autoMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>') // Don't change anything after client.channels
     if (newUser.voiceChannelID === confetti && confettiMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
