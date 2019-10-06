@@ -134,7 +134,7 @@ client.on('message', message => {
             if (!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
             break;
-        case 'help':
+        case 'help'.toLower():
             const embed = {
                 "title": "VC Mover by ExperienceYT!",
                  "name": " `Default prefix is set to '.'` ",
@@ -167,7 +167,7 @@ client.on('message', message => {
                       }
                     ]
                   };
-                  message.channel.sendEmbed(embed).toLower();
+                  message.channel.sendEmbed(embed);
             break;    
     }
 });
