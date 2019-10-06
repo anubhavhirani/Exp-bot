@@ -167,7 +167,7 @@ client.on('message', message => {
                       }
                     ]
                   };
-                  message.channel.send(embed);
+                  message.channel.sendEmbed(embed).toLower();
             break;    
     }
 });
