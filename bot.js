@@ -26,7 +26,7 @@ client.on('voiceStateUpdate',(oldMember,newMember)=>{
 	if(oldMember.voiceChannel===undefined&&newMember.voiceChannel!==undefined){
 		channel.send(`${newMember} joined ${newMember.voiceChannel}`);
 	}else if(newMember.voiceChannel===undefined){
-		channel.send(`${oldMember} left ${oldMember.voiceChannel}`);
+		channel.send(`${oldMember} left ${oldMember.voiceChannel}.timestamp()`);
 	}
 });
 
@@ -44,47 +44,47 @@ client.on('message', message => {
 
     if(message.channel.name === "moveeradmin"){
 
-    if (args[0] === 'llock') {
+    if (args[0].toLowerCase() === 'llock') {
         autoMoveEnabled = true
         message.channel.send('LOCO Automoving activated')
     }
-    if (args[0] === 'lunlock') {
+    if (args[0].toLowerCase() === 'lunlock') {
         autoMoveEnabled = false
         message.channel.send('LOCO Automoving disabled')
     }
-    if (args[0] === 'clock') {
+    if (args[0].toLowerCase() === 'clock') {
         confettiMoveEnabled = true
         message.channel.send('Confetti Automoving activated')
     }
-    if (args[0] === 'cunlock') {
+    if (args[0].toLowerCase() === 'cunlock') {
         confettiMoveEnabled = false
         message.channel.send('Confetti Automoving disabled')
     }
-    if (args[0] === 'flock') {
+    if (args[0].toLowerCase() === 'flock') {
         flipkartMoveEnabled = true
         message.channel.send('Flipkart Automoving activated')
     }
-    if (args[0] === 'funlock') {
+    if (args[0].toLowerCase() === 'funlock') {
         flipkartMoveEnabled = false
         message.channel.send('Flipkart Automoving disabled')
     }
-    if (args[0] === 'mblock') {
+    if (args[0].toLowerCase() === 'mblock') {
         mbMoveEnabled = true
         message.channel.send('100MB Automoving activated')
     }
-    if (args[0] === 'mbunlock') {
+    if (args[0].toLowerCase() === 'mbunlock') {
         mbMoveEnabled = false
         message.channel.send('100MB Automoving disabled')
     }
-    if (args[0] === 'jlock') {
+    if (args[0].toLowerCase() === 'jlock') {
         jeetohMoveEnabled = true
         message.channel.send('Jeetoh Automoving activated')
     }
-    if (args[0] === 'junlock') {
+    if (args[0].toLowerCase() === 'junlock') {
         jeetohMoveEnabled = false
         message.channel.send('Jeetoh Automoving disabled')
     }
-    if (args[0] === 'vclock') {
+    if (args[0].toLowerCase() === 'vclock') {
         jeetohMoveEnabled = true
         autoMoveEnabled = true
         confettiMoveEnabled = true
@@ -92,7 +92,7 @@ client.on('message', message => {
         mbMoveEnabled = true
         message.channel.send('All Voice Channels Locked to Entry Room')
     }
-    if (args[0] === 'vcunlock') {
+    if (args[0].toLowerCase() === 'vcunlock') {
         jeetohMoveEnabled = false
         autoMoveEnabled = false
         confettiMoveEnabled = false
