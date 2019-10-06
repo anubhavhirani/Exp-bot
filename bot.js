@@ -137,7 +137,8 @@ client.on('message', message => {
         case 'help':
             const embed = {
                 "title": "VC Mover by ExperienceYT!",
-                    "description": "Here are all the commands for your server: ```\Default Prefix is set to '.'```",
+                    ```\Default Prefix is set to '.'```",
+                    "description": "Here are all the commands for your server:
                     "color": 16738560,
                     "timestamp": "2019-10-06T01:21:31.044Z",
                     "footer": {
@@ -158,15 +159,15 @@ client.on('message', message => {
                     "fields": [
                       {
                         "name": " `vclock:` ",
-                        "value": "Locks all voice channels, leaving main voice channel."
+                        "value": "Locks all voice channels, leaving main VC."
                       },
                       {
                         "name": " `vcunlock:` ",
                         "value": "Unlocks all voice channels."
                       },
                       {
-                        "name": " `moveall:' ",
-                        "value": "Moves users from all voice channels to main Voice channel"
+                        "name": " `moveall:`  ",
+                        "value": "Moves users from all voice channels to main VC."
                       }
                     ]
                   };
