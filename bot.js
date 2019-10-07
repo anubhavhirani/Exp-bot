@@ -32,14 +32,14 @@ let termmvcMoveEnabled = false
 client.on('ready', () => {
 var welcomeChannel = []
 try {
-    welcomeChannel.push(client.channels.find("name", "welcome"))
+    welcomeChannel.push(client.channels.find(channel => channel.name === "welcome"))
 }
 catch(error) {
     console.log(error)
 }
 
 try {
-    welcomeChannel.push(client.channels.find("name", "general"))
+    welcomeChannel.push(client.channels.find(channel => channel.name === "general"))
 }
 catch(error) {
     console.log(error)
