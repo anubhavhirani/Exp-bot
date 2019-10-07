@@ -62,7 +62,7 @@ client.on('voiceStateUpdate',(oldMember,newMember)=>{
 	const channel=oldMember.guild.channels.find(ch=>ch.name==='voice-log');
 	if(!channel)return;
 	if(oldMember.voiceChannel===undefined&&newMember.voiceChannel!==undefined){
-		channel.send(`${newMember} joined ${newMember.voiceChannel} ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' })}`);
+		channel.send(``${newMember} joined ${newMember.voiceChannel} ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' })}``);
 	}else if(newMember.voiceChannel===undefined){
 		channel.send(`${oldMember} left ${oldMember.voiceChannel} ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' })}`);
 	}
