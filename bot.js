@@ -177,8 +177,7 @@ client.on('message', message => {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
     }}
 
-    if(message.channel.id !== "630616948618821664")
-    return message.reply('what ever message here');
+    if(message.channel.id !== "630616948618821664"){
  if (args[0].toLowerCase() === 'vclock') {
         termdanMoveEnabled = true
         termmusMoveEnabled = true
@@ -196,7 +195,7 @@ client.on('message', message => {
     
     if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!tmove 564445955252944899 CUSTOMER')
-    }
+    }}
 
     if(message.channel.id === "630658975746097175"){
         
