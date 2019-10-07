@@ -176,17 +176,8 @@ client.on('message', message => {
                  "name": " `Default prefix is set to '.'` ",
                     "description": " Here are all the commands for your server: ",
                     "color": 16738560,
-                    "footer": {
-                      "icon_url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png",
-                      "text": "VC Mover"
-                    },
                     "thumbnail": {
                       "url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png"
-                    },
-                    "author": {
-                      "name": "VC Mover",
-                      "url": "https://discordapp.com",
-                      "icon_url": "https://cdn.discordapp.com/attachments/629032504644599809/630217087666618408/icon-2382008_960_720.png"
                     },
                     "fields": [
                       {
