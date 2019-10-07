@@ -11,7 +11,8 @@ const voiceChannelToMoveToId = '628939897742295063'
 const moveerAdminTextChannelId = '629032504644599809' // Don't change this after you've added the correct channel
 
 if(message.channel.name === "moveeradmin"){
-	message.channel.send('LOCO Automoving activated')
+	message.channel.send('LOCO Automoving activated')	
+}
 	
 
 let autoMoveEnabled = false
