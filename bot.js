@@ -177,20 +177,20 @@ client.on('message', message => {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
     }}
 
-    if(message.channel.id !== "630616948618821664"){
- if (args[0].toLowerCase() === 'vclock') {
+    if(message.channel.id === "630616948618821664"){
+
+    if (args[0].toLowerCase() === 'vclock') {
         termdanMoveEnabled = true
         termmusMoveEnabled = true
         termmvcMoveEnabled = true
         message.channel.send('All Voice Channels Locked to 🔊STUDY ROOM🔊')
     }
-        
+	    
     if (args[0].toLowerCase() === 'vcunlock') {
         termmvcMoveEnabled = false
         termmusMoveEnabled = false
         termdanMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
-     
     }
     
     if (args[0].toLowerCase() === 'moveall') {
@@ -210,8 +210,7 @@ client.on('message', message => {
             break;
 
         case 'clear':
-            if (!args[1]) 
-		    message.reply('Please mention number of messages to delete')
+            if (!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
             break;
             
