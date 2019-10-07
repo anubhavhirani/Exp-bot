@@ -175,7 +175,7 @@ client.on('message', message => {
     }
     if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
-    }
+    }}
 
     if(message.channel.name === "general"){
 
@@ -200,9 +200,7 @@ client.on('message', message => {
     }
     if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!gmove 🎧𝓜𝓤𝓢𝓘𝓒🎧')
-    }};
-
-}
+    }}
 
 
     switch (args[0].toLowerCase()) {
