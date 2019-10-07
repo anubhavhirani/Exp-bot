@@ -178,7 +178,8 @@ client.on('message', message => {
     }}
 
     if(message.channel.id !== "630616948618821664")
-    return messsage.reply('what ever message here')
+    return message.reply('what ever message here');
+;
  if (args[0].toLowerCase() === 'vclock') {
         termdanMoveEnabled = true
         termmusMoveEnabled = true
