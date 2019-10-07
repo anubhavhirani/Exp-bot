@@ -209,13 +209,6 @@ client.on('message', message => {
             message.channel.send('pong!');
             break;
 		    
-        case 'more help':
-            message.channel.send('To begin use command vclock in #moveeradmin channel to enable lock to all voice channels and anyone joining voice channel other than Main Voice Channel will be moved to Main Voice Channel.')
-            message.channel.send('use vcunlock to disable moving of users to Main Voice Channel.')
-	    message.channel.send('use moveall to move all users from all voice channels to Main Voice Channel.');
-	    break;
-
-
         case 'clear':
             if (!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
@@ -240,8 +233,14 @@ client.on('message', message => {
                         "value": "Unlocks all voice channels."
                       },
                       {
-                        "name": " `moveall:`  ",
-                        "value": "Moves users from all voice channels to main VC."
+                        "name": " `moveall` ",
+                        "Moves users from all voice channels to main VC."
+                      },
+                      {
+                        "name": " `Detailed instruction:`  ",
+                        "value": "To begin use command vclock in #moveeradmin channel to enable lock to all voice channels and anyone joining voice channel other than Main Voice Channel will be moved to Main Voice Channel.",
+			"value": "Use vcunlock to disable moving of users to Main Voice Channel.",
+			"value": "Use moveall to move all users from all voice channels to Main Voice Channel."
                       }
                     ]
                   };
