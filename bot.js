@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const PREFIX = '';
 
 const termgen = '564445955252944899'
-const termdan = '615598279987691540' 
+const termdan = '595318381541064705' 
 const termmus = '573709249260290073'   // For Terminus Force
 const termmvc = '604997838887452672'
 const termgeneral = '630616948618821664'  //Text channel
