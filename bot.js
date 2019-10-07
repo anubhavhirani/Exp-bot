@@ -11,7 +11,7 @@ const voiceChannelToMoveToId = '628939897742295063'
 const moveerAdminTextChannelId = '629032504644599809' // Don't change this after you've added the correct channel
 
 const welcomeChannel = client.channels.get("630561783517544449")
-welcomeChannel.send("Welcome\n"+member.user.username);
+welcomeChannel.send("Welcofme\n"+member.user.username);
 
 let autoMoveEnabled = false
 let confettiMoveEnabled = false
