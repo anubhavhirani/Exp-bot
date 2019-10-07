@@ -192,13 +192,7 @@ client.on('message', message => {
         message.channel.send('All Voice Channels Unlocked')
     }
     if (args[0].toLowerCase() === 'moveall') {
-        message.channel.send('!gmove ⛔𝓓𝓐𝓝𝓖𝓔𝓡𝓢⛔')
-    }
-    if (args[0].toLowerCase() === 'moveall') {
-        message.channel.send('!gmove Verification-by-voice!')
-    }
-    if (args[0].toLowerCase() === 'moveall') {
-        message.channel.send('!gmove 🎧𝓜𝓤𝓢𝓘𝓒🎧')
+        message.channel.send('!tmove 564445955252944899 CUSTOMER')
     }}
 
 
