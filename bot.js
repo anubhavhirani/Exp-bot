@@ -180,23 +180,24 @@ client.on('message', message => {
     if(message.channel.name === "general"){
 
     if (args[0].toLowerCase() === 'vclock') {
-        jeetohMoveEnabled = true
-        autoMoveEnabled = true
-        confettiMoveEnabled = true
-        flipkartMoveEnabled = true
-        mbMoveEnabled = true
+        termdanMoveEnabled = true
+        termmusMoveEnabled = true
+        termgenMoveEnabled = true
+        termmvcMoveEnabled = true
         message.channel.send('All Voice Channels Locked to Entry Room')
     }
     if (args[0].toLowerCase() === 'vcunlock') {
-        jeetohMoveEnabled = false
-        autoMoveEnabled = false
-        confettiMoveEnabled = false
-        flipkartMoveEnabled = false
-        mbMoveEnabled = false
+        termmvcMoveEnabled = false
+        termmusMoveEnabled = false
+        termgenMoveEnabled = false
+        termdanMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
     }
     if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!gmove ⛔𝓓𝓐𝓝𝓖𝓔𝓡𝓢⛔')
+    }
+    if (args[0].toLowerCase() === 'moveall') {
+        message.channel.send('!gmove Verification-by-voice!')
     }
     if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!gmove 🎧𝓜𝓤𝓢𝓘𝓒🎧')
