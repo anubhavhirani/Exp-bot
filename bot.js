@@ -182,14 +182,12 @@ client.on('message', message => {
     if (args[0].toLowerCase() === 'vclock') {
         termdanMoveEnabled = true
         termmusMoveEnabled = true
-        termgenMoveEnabled = true
         termmvcMoveEnabled = true
         message.channel.send('All Voice Channels Locked to Entry Room')
     }
     if (args[0].toLowerCase() === 'vcunlock') {
         termmvcMoveEnabled = false
         termmusMoveEnabled = false
-        termgenMoveEnabled = false
         termdanMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
     }
