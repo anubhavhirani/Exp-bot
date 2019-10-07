@@ -22,7 +22,7 @@ try {
     welcomeChannel = client.channels.find("name", "welcome")
 }
 catch(error) {
-    welcomeChannel = client.channels.find("name", "welcome-1")
+    welcomeChannel = client.channels.find("name", "general")
 }
         welcomeChannel.send("Hey Experience, I am online!");
   console.log('I am ready!');
