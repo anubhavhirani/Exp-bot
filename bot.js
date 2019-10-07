@@ -177,7 +177,7 @@ client.on('message', message => {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
     }}
 
-    if(message.channel.name === "general"){
+    if(message.channel.name === "moveeradmin"){
 
     if (args[0].toLowerCase() === 'tvclock') {
         termdanMoveEnabled = true
