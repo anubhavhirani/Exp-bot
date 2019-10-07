@@ -208,6 +208,17 @@ client.on('message', message => {
         case 'ping':
             message.channel.send('pong!');
             break;
+     
+	case 'more help':
+            message.channel.send('To begin use command `vclock in` #moveeradmin channel to enable lock to all voice channels and anyone joining any channel other than STUDY ROOM will be moved to STUDY ROOM.
+.
+use `vcunlock` to disable moving of users to STUDY ROOM.
+.
+use `moveal` to move all users from all voice channels to STUDY ROOM. 
+
+Remember: there is no prefix for these commands.');
+            break;
+
 
         case 'clear':
             if (!args[1]) return message.reply('Please mention number of messages to delete')
@@ -235,6 +246,10 @@ client.on('message', message => {
                       {
                         "name": " `moveall:`  ",
                         "value": "Moves users from all voice channels to main VC."
+                      },
+                      {
+                        "name": " `more help:`  ",
+                        "value": "Type more help for detailed instruction."
                       }
                     ]
                   };
