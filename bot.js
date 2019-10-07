@@ -174,7 +174,7 @@ client.on('message', message => {
         message.channel.send('!fmove "Entry Room" 100MB')
     }
     if (args[0].toLowerCase() === 'moveall') {
-        message.channel.send('!rmove "Trivia Family!"')
+        message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
     }}
 
     if(message.channel.id === "630616948618821664"){
@@ -194,7 +194,7 @@ client.on('message', message => {
     }
     
     if (args[0].toLowerCase() === 'moveall') {
-        message.channel.send('!rmove CUSTOMER')
+        message.channel.send('!tmove 564445955252944899 CUSTOMER')
     }}
 
     switch (args[0].toLowerCase()) {
