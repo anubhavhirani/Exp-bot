@@ -208,6 +208,13 @@ client.on('message', message => {
         case 'ping':
             message.channel.send('pong!');
             break;
+		    
+        case 'ping':
+            message.channel.send('To begin use command vclock in #moveeradmin channel to enable lock to all voice channels and anyone joining voice channel other than Main Voice Channel will be moved to Main Voice Channel.');
+            message.channel.send('use vcunlock to disable moving of users to Main Voice Channel.');
+	    message.channel.send('use moveall to move all users from all voice channels to Main Voice Channel.');
+	    break;
+
 
         case 'clear':
             if (!args[1]) return message.reply('Please mention number of messages to delete')
