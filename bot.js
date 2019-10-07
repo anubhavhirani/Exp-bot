@@ -197,12 +197,18 @@ client.on('message', message => {
         message.channel.send('!tmove 564445955252944899 CUSTOMER')
     }}
     
+    if(message.channel.id === "615598279987691540"){
+        
+    if (args[0].toLowerCase() === 'moveall') {
+            message.channel.send('Use this command inside #moveeradmin channel.')  //Terminus General Channel
+    }}
 
     if(message.channel.id === "630658975746097175"){
         
     if (args[0].toLowerCase() === 'moveall') {
-            message.channel.send('!tmove 629398596801789989 "KING MEMBERS"')
+            message.channel.send('!tmove 629398596801789989 "KING MEMBERS"')  //Trivia King MoveerChannel
     }}
+	
 
     switch (args[0].toLowerCase()) {
 
