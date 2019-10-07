@@ -85,7 +85,7 @@ client.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
-    if(message.channel.name === "moveeradmin"){
+    if(message.channel.id === "629032504644599809"){
 
     if (args[0].toLowerCase() === 'llock') {
         autoMoveEnabled = true
@@ -179,19 +179,19 @@ client.on('message', message => {
 
     if(message.channel.id === "630616948618821664"){
 
-    if (args[0].toLowerCase() === 'tvclock') {
+    if (args[0].toLowerCase() === 'vclock') {
         termdanMoveEnabled = true
         termmusMoveEnabled = true
         termmvcMoveEnabled = true
         message.channel.send('All Voice Channels Locked to 🔊STUDY ROOM🔊')
     }
-    if (args[0].toLowerCase() === 'tvcunlock') {
+    if (args[0].toLowerCase() === 'vcunlock') {
         termmvcMoveEnabled = false
         termmusMoveEnabled = false
         termdanMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
     }
-    if (args[0].toLowerCase() === 'tmoveall') {
+    if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!tmove 564445955252944899 CUSTOMER')
     }}
 
@@ -208,7 +208,6 @@ client.on('message', message => {
             break;
             
         case 'help':
-                if(message.channel.name === "general"){
             const embed = {
                 "title": "VC Mover by Experience!",
                  "name": " `Default prefix is set to '.'` ",
@@ -219,15 +218,15 @@ client.on('message', message => {
                     },
                     "fields": [
                       {
-                        "name": " `tvclock:` ",
+                        "name": " `vclock:` ",
                         "value": "Locks all voice channels, leaving main VC."
                       },
                       {
-                        "name": " `tvcunlock:` ",
+                        "name": " `vcunlock:` ",
                         "value": "Unlocks all voice channels."
                       },
                       {
-                        "name": " `tmoveall:`  ",
+                        "name": " `moveall:`  ",
                         "value": "Moves users from all voice channels to main VC."
                       }
                     ]
