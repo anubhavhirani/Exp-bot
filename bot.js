@@ -210,8 +210,8 @@ client.on('message', message => {
             break;
 		    
         case 'more help':
-            message.channel.send('To begin use command vclock in #moveeradmin channel to enable lock to all voice channels and anyone joining voice channel other than Main Voice Channel will be moved to Main Voice Channel.');
-            message.channel.send('use vcunlock to disable moving of users to Main Voice Channel.');
+            message.channel.send('To begin use command vclock in #moveeradmin channel to enable lock to all voice channels and anyone joining voice channel other than Main Voice Channel will be moved to Main Voice Channel.')
+            message.channel.send('use vcunlock to disable moving of users to Main Voice Channel.')
 	    message.channel.send('use moveall to move all users from all voice channels to Main Voice Channel.');
 	    break;
 
