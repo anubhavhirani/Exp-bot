@@ -18,7 +18,7 @@ let mbMoveEnabled = false
 
 client.on('ready', () => {
   const welcomeChannel = client.channels.get("630561783517544449")
-  welcomeChannel.send("Welcome\n"+member.user.username);
+  welcomeChannel.send("Welcome");
   console.log('I am ready!');
   client.user.setPresence({
         status:"idle",
