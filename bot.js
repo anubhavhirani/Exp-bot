@@ -32,7 +32,7 @@ catch(error) {
     console.log(error)
 }
 for(item in welcomeChannel) {
-welcomeChannel[item].send(" 'Hey Experience, I am online!' ")
+welcomeChannel[item].send("'Hey Experience, I am online!'")
 }
   console.log('I am ready!');
   client.user.setPresence({
