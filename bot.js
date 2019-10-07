@@ -216,10 +216,6 @@ else {
             message.channel.send('pong!');
             break;
 
-        case 'moveall':
-            message.channel.send('TThis is an admin command, please use this inside a textchannel named "moveeradmin"');
-            break;
-
         case 'clear':
             if (!args[1]) return message.reply('Please mention number of messages to delete')
             message.channel.bulkDelete(args[1]);
