@@ -2,19 +2,32 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const PREFIX = '';
 
-const voiceChannelToMoveFromId = '628940183735238676'
+const termgen = '564445955252944899'
+const termdan = '615598279987691540' 
+const termmus = '573709249260290073'   // For Terminus Force
+const termmvc = '604997838887452672'
+const termgeneral = '615598279987691540'  //Text channel
+
 const confetti = '628940303763767355'
+const voiceChannelToMoveFromId = '628940183735238676'
 const flipkart = '628940415567134720'
 const jeetoh = '628940265511452682'
-const mb = '628940223224610816'
+const mb = '628940223224610816'        // For Trivia Night
 const voiceChannelToMoveToId = '628939897742295063'
-const moveerAdminTextChannelId = '629032504644599809' // Don't change this after you've added the correct channel
+const moveerAdminTextChannelId = '629032504644599809' 
 
 let autoMoveEnabled = false
 let confettiMoveEnabled = false
-let flipkartMoveEnabled = false
+let flipkartMoveEnabled = false // For Trivia Night
 let jeetohMoveEnabled = false
 let mbMoveEnabled = false
+
+let termgenMoveEnabled = false
+let termdanMoveEnabled = false  // For Terminus Force
+let termmusMoveEnabled = false
+let termmvcMoveEnabled = false
+
+
 
 client.on('ready', () => {
 var welcomeChannel = []
@@ -61,6 +74,11 @@ client.on('voiceStateUpdate', (oldUser, newUser) => {
     if (newUser.voiceChannelID === flipkart && flipkartMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
     if (newUser.voiceChannelID === jeetoh && jeetohMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
     if (newUser.voiceChannelID === mb && mbMoveEnabled) client.channels.get(moveerAdminTextChannelId).send('!cmove ' + voiceChannelToMoveToId + ' <@' + newUser.id + '>')
+
+    if (newUser.voiceChannelID === termdan && termmvcMoveEnabled) client.channels.get(termgeneral).send('!cmove ' + termgen + ' <@' + newUser.id + '>')
+    if (newUser.voiceChannelID === termgen && termgenMoveEnabled) client.channels.get(termgeneral).send('!cmove ' + termgen + ' <@' + newUser.id + '>')
+    if (newUser.voiceChannelID === termmus && termdanMoveEnabled) client.channels.get(termgeneral).send('!cmove ' + termgen + ' <@' + newUser.id + '>')
+    if (newUser.voiceChannelID === termmvc && termmusMoveEnabled) client.channels.get(termgeneral).send('!cmove ' + termgen + ' <@' + newUser.id + '>')
 }) 
 
 client.on('message', message => {
@@ -157,6 +175,35 @@ client.on('message', message => {
     }
     if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
+    }}
+	
+client.on('message', message => {
+
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    if(message.channel.name === "general"){
+
+    if (args[0].toLowerCase() === 'vclock') {
+        jeetohMoveEnabled = true
+        autoMoveEnabled = true
+        confettiMoveEnabled = true
+        flipkartMoveEnabled = true
+        mbMoveEnabled = true
+        message.channel.send('All Voice Channels Locked to Entry Room')
+    }
+    if (args[0].toLowerCase() === 'vcunlock') {
+        jeetohMoveEnabled = false
+        autoMoveEnabled = false
+        confettiMoveEnabled = false
+        flipkartMoveEnabled = false
+        mbMoveEnabled = false
+        message.channel.send('All Voice Channels Unlocked')
+    }
+    if (args[0].toLowerCase() === 'moveall') {
+        message.channel.send('!gmove ⛔𝓓𝓐𝓝𝓖𝓔𝓡𝓢⛔')
+    }
+    if (args[0].toLowerCase() === 'moveall') {
+        message.channel.send('!gmove 🎧𝓜𝓤𝓢𝓘𝓒🎧')
     }}
 
     switch (args[0].toLowerCase()) {
