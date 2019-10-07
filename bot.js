@@ -6,7 +6,7 @@ const termgen = '564445955252944899'
 const termdan = '615598279987691540' 
 const termmus = '573709249260290073'   // For Terminus Force
 const termmvc = '604997838887452672'
-const termgeneral = '615598279987691540'  //Text channel
+const termgeneral = '630616948618821664'  //Text channel
 
 const confetti = '628940303763767355'
 const voiceChannelToMoveFromId = '628940183735238676'
@@ -183,7 +183,7 @@ client.on('message', message => {
         termdanMoveEnabled = true
         termmusMoveEnabled = true
         termmvcMoveEnabled = true
-        message.channel.send('All Voice Channels Locked to Entry Room')
+        message.channel.send('All Voice Channels Locked to 🔊STUDY ROOM🔊')
     }
     if (args[0].toLowerCase() === 'tvcunlock') {
         termmvcMoveEnabled = false
