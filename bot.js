@@ -17,11 +17,12 @@ let jeetohMoveEnabled = false
 let mbMoveEnabled = false
 
 client.on('ready', () => {
-  try {
-    const welcomeChannel = client.channels.find("name", "welcome")
+var welcomeChannel;
+try {
+    welcomeChannel = client.channels.find("name", "welcome")
 }
 catch(error) {
-    const welcomeChannel = client.channels.find("name", "welcome-1")
+    welcomeChannel = client.channels.find("name", "welcome-1")
 }
         welcomeChannel.send("Hey Experience, I am online!");
   console.log('I am ready!');
