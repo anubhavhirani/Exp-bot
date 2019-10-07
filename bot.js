@@ -185,14 +185,28 @@ client.on('message', message => {
         termmvcMoveEnabled = true
         message.channel.send('All Voice Channels Locked to 🔊STUDY ROOM🔊')
     }
+
+else {
+        message.channel.send('TThis is an admin command, please use this inside a textchannel named "moveeradmin"');
+    }
+
     if (args[0].toLowerCase() === 'vcunlock') {
         termmvcMoveEnabled = false
         termmusMoveEnabled = false
         termdanMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
     }
+
+else {
+        message.channel.send('TThis is an admin command, please use this inside a textchannel named "moveeradmin"');
+    }
+    
     if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!tmove 564445955252944899 CUSTOMER')
+    }
+
+else {
+        message.channel.send('TThis is an admin command, please use this inside a textchannel named "moveeradmin"');
     }}
 
 
@@ -200,6 +214,10 @@ client.on('message', message => {
 
         case 'ping':
             message.channel.send('pong!');
+            break;
+
+        case 'moveall':
+            message.channel.send('TThis is an admin command, please use this inside a textchannel named "moveeradmin"');
             break;
 
         case 'clear':
