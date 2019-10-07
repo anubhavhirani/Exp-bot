@@ -204,7 +204,7 @@ client.on('message', message => {
     }
     if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!gmove 🎧𝓜𝓤𝓢𝓘𝓒🎧')
-    }}
+    }
 
     switch (args[0].toLowerCase()) {
 
