@@ -179,19 +179,19 @@ client.on('message', message => {
 
     if(message.channel.name === "general"){
 
-    if (args[0].toLowerCase() === 'vclock') {
+    if (args[0].toLowerCase() === 'tvclock') {
         termdanMoveEnabled = true
         termmusMoveEnabled = true
         termmvcMoveEnabled = true
         message.channel.send('All Voice Channels Locked to Entry Room')
     }
-    if (args[0].toLowerCase() === 'vcunlock') {
+    if (args[0].toLowerCase() === 'tvcunlock') {
         termmvcMoveEnabled = false
         termmusMoveEnabled = false
         termdanMoveEnabled = false
         message.channel.send('All Voice Channels Unlocked')
     }
-    if (args[0].toLowerCase() === 'moveall') {
+    if (args[0].toLowerCase() === 'tmoveall') {
         message.channel.send('!tmove 564445955252944899 CUSTOMER')
     }}
 
@@ -208,6 +208,7 @@ client.on('message', message => {
             break;
             
         case 'help':
+                if(message.channel.name === "general"){
             const embed = {
                 "title": "VC Mover by Experience!",
                  "name": " `Default prefix is set to '.'` ",
@@ -233,7 +234,8 @@ client.on('message', message => {
                   };
                   message.channel.send({embed});
             break;    
-    }
+    }}
+
 });
 
 // THIS MUST BE THIS WAY
