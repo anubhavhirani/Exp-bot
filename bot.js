@@ -219,15 +219,15 @@ client.on('message', message => {
                     },
                     "fields": [
                       {
-                        "name": " `vclock:` ",
+                        "name": " `tvclock:` ",
                         "value": "Locks all voice channels, leaving main VC."
                       },
                       {
-                        "name": " `vcunlock:` ",
+                        "name": " `tvcunlock:` ",
                         "value": "Unlocks all voice channels."
                       },
                       {
-                        "name": " `moveall:`  ",
+                        "name": " `tmoveall:`  ",
                         "value": "Moves users from all voice channels to main VC."
                       }
                     ]
