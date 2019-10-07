@@ -18,7 +18,7 @@ let mbMoveEnabled = false
 
 client.on('ready', () => {
   const welcomeChannel = client.channels.find("name", "welcome")
-     welcomeChannel.send("Hey Experience, I am online!");
+        welcomeChannel.send("Hey Experience, I am online!");
   console.log('I am ready!');
   client.user.setPresence({
         status:"idle",
