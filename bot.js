@@ -34,7 +34,7 @@ client.on('voiceStateUpdate',(oldMember,newMember)=>{
 	if(oldMember.voiceChannel===undefined&&newMember.voiceChannel!==undefined){
 		channel.send(`${newMember} joined ${newMember.voiceChannel} ${new Date()}`);
 	}else if(newMember.voiceChannel===undefined){
-		channel.send(`${oldMember} left ${oldMember.voiceChannel} ${new Date()}`);
+		channel.send(`${oldMember} left ${oldMember.voiceChannel} ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' })}`);
 	}
 });
 
