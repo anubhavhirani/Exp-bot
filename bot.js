@@ -177,15 +177,15 @@ client.on('message', message => {
         message.channel.send('!tmove 628939897742295063 "Trivia Family!"')
     }}
 
-    if(message.channel.id !== "630616948618821664"){
-	    
-    if (args[0].toLowerCase() === 'vclock') {
+    if(message.channel.id !== "630616948618821664")
+    return messsage.reply('what ever message here')
+ if (args[0].toLowerCase() === 'vclock') {
         termdanMoveEnabled = true
         termmusMoveEnabled = true
         termmvcMoveEnabled = true
         message.channel.send('All Voice Channels Locked to 🔊STUDY ROOM🔊')
     }
-	    
+        
     if (args[0].toLowerCase() === 'vcunlock') {
         termmvcMoveEnabled = false
         termmusMoveEnabled = false
@@ -202,17 +202,6 @@ client.on('message', message => {
         
     if (args[0].toLowerCase() === 'moveall') {
             message.channel.send('!tmove 629398596801789989 "KING MEMBERS"')
-    }
-    if(message.channel.id === "615598279987691540"){
-        
-    if (args[0].toLowerCase() === 'vcunlock') {
-            message.channel.send('Use this command inside #moveeradmin')
-    }
-    if (args[0].toLowerCase() === 'vclock') {
-            message.channel.send('Use this command inside #moveeradmin')  // Termnius Text Channels
-    }
-    if (args[0].toLowerCase() === 'moveall') {
-            message.channel.send('Use this command inside #moveeradmin')
     }}
 
     switch (args[0].toLowerCase()) {
