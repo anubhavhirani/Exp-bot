@@ -194,8 +194,11 @@ client.on('message', message => {
     }
     
     if (args[0].toLowerCase() === 'moveall') {
+        if(message.channel.id !== "630616948618821664")
+return messsage.reply('what ever message here');
         message.channel.send('!tmove 564445955252944899 CUSTOMER')
     }}
+
 
     if(message.channel.id === "630658975746097175"){
         
