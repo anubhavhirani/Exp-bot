@@ -201,6 +201,24 @@ client.on('message', message => {
         
     if (args[0].toLowerCase() === 'moveall') {
             message.channel.send('Use this command inside #moveeradmin channel.')  //Terminus General Channel
+    }
+    if (args[0].toLowerCase() === 'vclock') {
+            message.channel.send('Use this command inside #moveeradmin channel.')  //Terminus General Channel
+    }
+    if (args[0].toLowerCase() === 'vcunlock') {
+            message.channel.send('Use this command inside #moveeradmin channel.')  //Terminus General Channel
+    }}
+	
+    if(message.channel.id === "628937784346017803"){
+        
+    if (args[0].toLowerCase() === 'moveall') {
+            message.channel.send('Use this command inside #moveeradmin channel.')  //Trivia Night General Channel
+    }
+    if (args[0].toLowerCase() === 'vclock') {
+            message.channel.send('Use this command inside #moveeradmin channel.')  //Trivia Night General Channel
+    }
+    if (args[0].toLowerCase() === 'vcunlock') {
+            message.channel.send('Use this command inside #moveeradmin channel.')  //Trivia Night General Channel
     }}
 
     if(message.channel.id === "630658975746097175"){
