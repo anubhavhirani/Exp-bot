@@ -19,14 +19,14 @@ let mbMoveEnabled = false
 client.on('ready', () => {
 var welcomeChannel = []
 try {
-    welcomeChannel.append(client.channels.find("name", "welcome"))
+    welcomeChannel.push(client.channels.find("name", "welcome"))
 }
 catch(error) {
     console.log(error)
 }
 
 try {
-    welcomeChannel.append(client.channels.find("name", "welcome-1"))
+    welcomeChannel.push(client.channels.find("name", "general"))
 }
 catch(error) {
     console.log(error)
