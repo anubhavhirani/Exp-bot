@@ -2,9 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const PREFIX = '';
 
-const triviakinggeneral = '630616948618821664'  //Trivia King Text channel
-const entryking = '629398596801789989'
-
 const termgen = '564445955252944899'
 const termdan = '595318381541064705' 
 const termmus = '573709249260290073'   // For Terminus Force
@@ -182,19 +179,23 @@ client.on('message', message => {
 
     if(message.channel.id === "630616948618821664"){
 
-        if (args[0].toLowerCase() === 'moveall') {
-            message.channel.send('!tmove 564445955252944899 "member"')
-        }
+    if (args[0].toLowerCase() === 'vclock') {
+        termdanMoveEnabled = true
+        termmusMoveEnabled = true
+        termmvcMoveEnabled = true
+        message.channel.send('All Voice Channels Locked to 🔊STUDY ROOM🔊')
+    }
+	    
+    if (args[0].toLowerCase() === 'vcunlock') {
+        termmvcMoveEnabled = false
+        termmusMoveEnabled = false
+        termdanMoveEnabled = false
+        message.channel.send('All Voice Channels Unlocked')
+    }
     
     if (args[0].toLowerCase() === 'moveall') {
         message.channel.send('!tmove 564445955252944899 CUSTOMER')
     }}
-
-    if(message.channel.id === "630658975746097175"){
-        
-        if (args[0].toLowerCase() === 'moveall') {
-            message.channel.send('!tmove 629398596801789989 "KING MEMBERS"')
-        }}
 
     switch (args[0].toLowerCase()) {
 
