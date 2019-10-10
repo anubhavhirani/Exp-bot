@@ -221,6 +221,12 @@ client.on('message', message => {
             message.channel.send('Use this command inside #moveeradmin channel.')  //Trivia Night General Channel
     }}
 
+    if(message.channel.id === "631652705856782386"){
+        
+    if (args[0].toLowerCase() === 'moveall') {
+            message.channel.send('!tmove 558718310490046477 NavGamerArmy')  //Trivia King MoveerChannel
+    }}
+	
     if(message.channel.id === "630658975746097175"){
         
     if (args[0].toLowerCase() === 'moveall') {
